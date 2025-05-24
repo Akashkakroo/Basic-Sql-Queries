@@ -1,0 +1,2 @@
+SELECT name, age FROM employees
+WHERE age = (SELECT MIN(age) FROM employees);
