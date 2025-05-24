@@ -1,0 +1,4 @@
+SELECT e.name, e.salary, d.dept_name
+FROM employees AS e JOIN departments AS d
+ON d.id = e.department_id
+WHERE d.dept_name LIKE "S%" AND e.salary > 50000;
