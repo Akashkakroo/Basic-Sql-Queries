@@ -1,0 +1,4 @@
+SELECT d.dept_name, AVG(e.salary) AS average_salary
+FROM employees AS e JOIN departments AS d
+ON d.id = e.department_id
+GROUP BY e.department_id;
