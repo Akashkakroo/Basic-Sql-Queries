@@ -1,0 +1,4 @@
+SELECT d.dept_name, COUNT(e.id) AS employee_count
+FROM departments AS d LEFT JOIN employees AS e
+ON d.id = e.department_id
+GROUP BY d.dept_name;
