@@ -1,0 +1,5 @@
+SELECT d.dept_name, COUNT(e.id) AS average_salary
+FROM employees AS e JOIN departments AS d
+ON d.id = e.department_id
+WHERE d.dept_name LIKE "E%"
+GROUP BY e.department_id;
