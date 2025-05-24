@@ -1,0 +1,4 @@
+SELECT name, age 
+FROM employees 
+WHERE age = (
+SELECT ROUND(AVG(age)) FROM employees);
