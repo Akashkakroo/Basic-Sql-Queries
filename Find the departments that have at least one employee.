@@ -1,0 +1,5 @@
+SELECT d.dept_name
+FROM employees AS e
+JOIN departments AS d ON d.id = e.department_id
+GROUP BY d.dept_name
+HAVING COUNT(e.id) >= 1;
