@@ -1,0 +1,4 @@
+SELECT e.name, d.dept_name
+FROM departments AS d LEFT JOIN employees AS e 
+ON d.id = e.department_id
+WHERE d.dept_name = "Engineering";
