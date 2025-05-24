@@ -1,0 +1,8 @@
+WITH CTE AS (SELECT d.dept_name, COUNT(e.name) as e_count
+FROM employees AS e JOIN departments AS d
+ON d.id = e.department_id
+GROUP BY d.dept_name)
+
+SELECT dept_name, e_count
+FROM CTE 
+WHERE e_count = (SELECT MAX(e_count) FROM CTE);
