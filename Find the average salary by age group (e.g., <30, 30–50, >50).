@@ -1,0 +1,14 @@
+SELECT 
+CASE 
+WHEN age < 30 THEN "<30"
+WHEN age BETWEEN 30 AND 50 THEN "30-50"
+ELSE ">50"
+END AS age_group,
+AVG(salary) AS average_salary
+FROM employees
+GROUP BY 
+CASE
+WHEN age < 30 THEN "<30"
+WHEN age BETWEEN 30 AND 50 THEN "30-50"
+ELSE ">50"
+END;
